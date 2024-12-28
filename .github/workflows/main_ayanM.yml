@@ -1,8 +1,6 @@
 name: Deploy Powershell project to Azure Function App - AyanM
 on:
-  push:
-    branches:
-      - main
+  # Trigger the workflow manually. But currently [Dec24] GitHub CICD isn't supported on Flex consumption.
   workflow_dispatch:
 
 jobs:
