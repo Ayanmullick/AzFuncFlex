@@ -16,4 +16,4 @@ jobs:
         with:
           app-name: 'AyanM'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_367F8F2A641A48449E9A9DDA9C57714C }}
