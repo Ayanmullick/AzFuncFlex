@@ -11,11 +11,13 @@
 
 # Authenticate with Azure PowerShell using MSI.
 # Remove this if you are not planning on using MSI or Azure PowerShell.
+
+<#
 if ($env:MSI_SECRET) {
     Disable-AzContextAutosave -Scope Process | Out-Null
     Connect-AzAccount -Identity
 }
-
+#>
 # Uncomment the next line to enable legacy AzureRm alias in Azure PowerShell.
 # Enable-AzureRmAlias
 
