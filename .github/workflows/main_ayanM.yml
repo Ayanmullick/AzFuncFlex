@@ -15,7 +15,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version:  latest
+          dotnet-version: 6.0
 
       - name: Publish function app
         run: dotnet publish -c Release -o ./publish
