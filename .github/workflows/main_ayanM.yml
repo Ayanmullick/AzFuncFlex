@@ -1,4 +1,4 @@
-name: Deploy Powershell project to Azure Function App - Ayan
+name: Deploy Powershell project to Azure Function App - AyanM
 on:
   push:
     branches:
