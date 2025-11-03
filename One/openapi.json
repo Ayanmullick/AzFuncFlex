@@ -51,45 +51,6 @@
             }
           }
         }
-      },
-      "post": {
-        "summary": "Returns a greeting.",
-        "operationId": "One_PostGreeting",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "description": "Name to include in the greeting message.",
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful greeting response.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string",
-                      "description": "Greeting message returned by the function."
-                    }
-                  },
-                  "required": [
-                    "message"
-                  ]
-                },
-                "example": {
-                  "message": "Hello Ayan"
-                }
-              }
-            }
-          }
-        }
       }
     }
   }
