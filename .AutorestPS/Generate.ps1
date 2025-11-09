@@ -8,8 +8,13 @@ autorest --powershell --input-file=.Myfolder\generated\openapi.yaml --output-fol
 
 cd .AutorestPS
 $verbosePreference = "Continue"
+
+#One can test the raw definition file on https://petstore.swagger.io/ once it's added to the Function's CORS
+
 autorest --powershell --input-file=openapi.yaml --output-folder=.\One --namespace=OneFunction `
          --clear-output-folder=true --module-version=1.0.0 --use=@autorest/powershell@latest --verbose
+
+# The '.AutorestPS\One' folder is added in the .funcignore file so it isn't pushed into the function
 
 cd One
 .\build-module.ps1
