@@ -1,57 +1,20 @@
 {
   "openapi": "3.0.1",
-  "info": {
-    "title": "One Function API",
-    "version": "1.0.0",
-    "description": "Simple greeting endpoint implemented as an Azure Function."
-  },
-  "servers": [
-    {
-      "url": "https://ayanm.azurewebsites.net",
-      "description": "Production Azure Functions host"
-    }
-  ],
-  "paths": {
-    "/api/One": {
-      "get": {
-        "summary": "Returns a greeting.",
-        "operationId": "One_GetGreeting",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "description": "Name to include in the greeting message.",
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+  "info": {"title": "One Function API","version": "1.0.0","description": "Simple greeting endpoint implemented as an Azure Function." },
+  "servers": [{"url": "https://ayanm.azurewebsites.net","description": "Production Azure Functions host" }],
+  "paths": {"/api/One": {
+      "get": { "summary": "Returns a greeting.", "operationId": "One_GetGreeting",
+        "parameters": [ { "name": "name", "in": "query", "description": "Name to include in the greeting message.", "required": false, "schema": { "type": "string" } } ],
         "responses": {
-          "200": {
-            "description": "Successful greeting response.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string",
-                      "description": "Greeting message returned by the function."
-                    }
-                  },
-                  "required": [
-                    "message"
-                  ]
-                },
-                "example": {
-                  "message": "Hello Ayan"
-                }
-              }
+          "200": { "description": "Successful greeting response.",
+                   "content": { "application/json": {"schema": { "type": "object",
+                   "properties": { "message": { "type": "string", "description": "Greeting message returned by the function." }  },
+                   "required": [ "message" ]
+                                                               },  "example": { "message": "Hello Ayan" }
+                                                    }
+                              }
+                  } }
             }
+                        }
           }
-        }
-      }
-    }
-  }
 }
