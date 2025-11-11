@@ -21,6 +21,8 @@ cd One
 .\build-module.ps1
 #endregion
 
+
+
 #region test the module
 Import-Module .\OneFunctionApi.psd1
 <#VERBOSE: Loading module from path '<>\AzFuncFlex\.AutorestPS\One\OneFunctionApi.psd1'.
