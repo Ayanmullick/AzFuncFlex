@@ -1,3 +1,4 @@
+#region Install autorest and generate module from existing OpenAPI definition file
 npm install -g autorest -verbose
 
 <#older attempt
@@ -18,7 +19,9 @@ autorest --powershell --input-file=openapi.yaml --output-folder=.\One --namespac
 
 cd One
 .\build-module.ps1
+#endregion
 
+#region test the module
 Import-Module .\OneFunctionApi.psd1
 <#VERBOSE: Loading module from path '<>\AzFuncFlex\.AutorestPS\One\OneFunctionApi.psd1'.
 VERBOSE: Loading 'Assembly' from path '<>\AzFuncFlex\.AutorestPS\One\bin\OneFunctionApi.private.dll'.
@@ -94,3 +97,13 @@ Hello Ayan
 cd ..
 dotnet new sln -n OneFunctionApi
 dotnet sln OneFunctionApi.sln add .\One\OneFunctionApi.csproj
+
+#endregion
+
+
+#region command to generate the OpenAPI document in a C# function
+#From the root of the C# Azure Functions project (where host.json lives), run:
+
+func openapi export --format yaml --output ./openapi.yaml
+#(or use --format json if you prefer JSON). This command is available once the project references Microsoft.Azure.WebJobs.Extensions.OpenApi.
+#endregion

@@ -7,6 +7,11 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '.git/**'
+      - '.vscode/**'
+      - 'local.settings.json'
+      - '.AutorestPS/**'
   workflow_dispatch:
 
 env:
@@ -22,7 +27,7 @@ jobs:
     steps:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v4
-      
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -37,4 +42,3 @@ jobs:
           app-name: 'AyanM'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          
