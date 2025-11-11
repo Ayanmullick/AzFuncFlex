@@ -95,12 +95,14 @@ Message
 Hello Ayan
 #>
 
+#endregion
 
+#region manually create the solution file and add the project to avoid creation in the root.
 cd ..
 dotnet new sln -n OneFunctionApi
 dotnet sln OneFunctionApi.sln add .\One\OneFunctionApi.csproj
-
 #endregion
+
 
 
 #region command to generate the OpenAPI document in a C# function
