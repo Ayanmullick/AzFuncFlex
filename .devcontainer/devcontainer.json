@@ -38,7 +38,11 @@
         "msazurermtools.azurerm-vscode-tools",
         "ms-dotnettools.dotnet-interactive-vscode",
         "ms-dotnettools.vscode-dotnet-runtime",
-        "Postman.postman-for-vscode"
+        "Postman.postman-for-vscode",
+        "redhat.vscode-yaml",
+        "andrewbutson.vscode-openapi-viewer",
+        "arjun.swagger-viewer",
+        "george-alisson.html-preview-vscode"
       ]
     }
   }
