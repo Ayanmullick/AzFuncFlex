@@ -14,3 +14,5 @@ license.txt
 /*.snk
 /*.csproj
 /*.nuspec
+
+!build-module.ps1
