@@ -12,6 +12,7 @@ on:
       - '.vscode/**'
       - 'local.settings.json'
       - '.AutorestPS/**'
+      - '.devcontainer/**'
   workflow_dispatch:
 
 env:
