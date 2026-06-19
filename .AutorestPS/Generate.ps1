@@ -102,12 +102,3 @@ cd ..
 dotnet new sln -n OneFunctionApi
 dotnet sln OneFunctionApi.sln add .\One\OneFunctionApi.csproj
 #endregion
-
-
-
-#region command to generate the OpenAPI document in a C# function
-#From the root of the C# Azure Functions project (where host.json lives), run:
-
-func openapi export --format yaml --output ./openapi.yaml
-#(or use --format json if you prefer JSON). This command is available once the project references Microsoft.Azure.WebJobs.Extensions.OpenApi.
-#endregion

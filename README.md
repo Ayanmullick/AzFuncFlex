@@ -115,3 +115,16 @@ For example, the current operation uses:
 - Operation ID: `One_GetGreeting`
 
 AutoRest uses that information to create the exported `Get-OneGreeting` PowerShell function.
+
+## API Language Does Not Matter
+
+The PowerShell module generation does not depend on the language used to build the API. AutoRest only needs the OpenAPI
+definition file.
+
+In this repo the API implementation is a PowerShell Azure Function, but the same generation steps would work for a C#
+Azure Function, a Node.js API, a Python API, or any other service as long as it has an accurate OpenAPI file. For this
+repo, that file is `.AutorestPS/openapi.yaml`.
+
+From the root of a C# Azure Functions project (where host.json lives), one can run:
+`func openapi export --format yaml --output ./openapi.yaml`
+(or use --format json if you prefer JSON). This command is available once the project references Microsoft.Azure.WebJobs.Extensions.OpenApi.
